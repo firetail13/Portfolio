@@ -1,5 +1,4 @@
-import './style.css'
-import gsap from 'gsap';
+import * as gsap from 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js';
 import * as THREE from 'https://unpkg.com/three@0.126.1/build/three.module.js';
 import vertexShader from './shaders/vertex.glsl'
 import fragmentShader from './shaders/fragment.glsl'
