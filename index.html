@@ -1,49 +1,9 @@
-<?php
-
-// server side validation
-    $phpError = "";
-    $error = "";
-    $successMessage = "";
-if($_POST) {
-    
-    if (!$_POST['name']) {
-        $error .= "Your name is required. <br>";
-    }
-        if (!$_POST['email']) {
-        $error .= "Your email address is required. <br>";
-    }
-          if (!$_POST['message']) {
-        $error .= "Your content is required. <br>";
-    }
-    
-    if($_POST['email'] && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) === false) {
-        $error .= "The email address is invalid. <br>";
-    }
-    
-    if ($error != "") {
-        $phpError = $error;
-    } else {
-        $emailTo = "dylanjiawei@gmail.com";
-        $subject = "Portfolio Email";
-        $content = $_POST['message'] . ". From: " . $_POST['name'] ;
-        $headers = "FROM: ". $_POST['email'];
-        
-        if(mail($emailTo, $subject, $content, $headers)) {
-            $successMessage =  "Your message was sent! I'll get back to you ASAP!";
-        } else {
-            $phpError = "Your message couldnt be sent - please try again later.";
-        }
-    }
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dylan's Portfolio</title>
+    <title>Portfolio</title>
     <link href="tailwind.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,42 +13,43 @@ if($_POST) {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
   <body>
-    <a id="top">
-    <nav class="navbar">
-            <div class="nav-logo"><img class="logo-image" src="img/logo.png" alt="logo"></div>
-            <ul class="nav-menu">
-              <li class="nav-item">
-                    <a href="#top">Home</a>
-                </li>
+    <a id="top"></a>
+      <nav class="navbar">
+              <div class="nav-logo"><img class="logo-image" src="img/logo.png" alt="logo"></div>
+              <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects">Projects</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                      <a href="#top">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="#about">About</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="#projects">Projects</a>
+                  </li>
+              </ul>
+              <div class="hamburger">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+              </div>
+          </nav>
+          <div class="flex h-screen bg-black">
+            <div class="w-1/2 flex flex-col justify-center px-8">
+              <div style="max-width: 600px;" class="mx-auto">
+              <h1 class="text-white text-4xl mb-8 leading-tight-none auto-type-name">I'm <span class="auto-input"></span></h1>
+              <p class="text-gray-400 mb-8">Click below to download my resume and if you want to learn more about me feel free to contact me!</p>
+              <div>
+              <a class="font-lato resume-download-button" href="#">Download Resume</a>
+              <a class="font-lato contact-button" href="#contact">Contact Me</a>
             </div>
-        </nav>
-    <div class="flex h-screen bg-black">
-      <div class="w-1/2 flex flex-col justify-center px-8">
-        <div style="max-width: 600px;" class="mx-auto">
-        <h1 class="text-white text-4xl mb-8 leading-tight-none auto-type-name">I'm <span class="auto-input"></span></h1>
-        <p class="text-gray-400 mb-8">Click below to download my resume and if you want to learn more about me feel free to contact me!</p>
-        <div>
-        <a class="font-lato resume-download-button" href="#">Download Resume</a>
-        <a class="font-lato contact-button" href="#contact">Contact Me</a>
-      </div>
-      </div>
-      </div>
-      <div class="w-1/2" id="canvasContainer">
-      <canvas></canvas>
-      </div>
-    </div>
-    <script type="module" src="./src/main.js"></script>
+            </div>
+            </div>
+            <div class="w-1/2" id="canvasContainer">
+            <canvas></canvas>
+            </div>
+          </div>
+    <script type="module" src="/src/main.js">
+    </script>
     <main>
       <br>
       <a id="about"></a>
@@ -253,7 +214,6 @@ if($_POST) {
         </footer>
         </div>
     </main>
-    <script src="src/js/nav.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
       var typed = new Typed(".auto-input", {
@@ -266,29 +226,29 @@ if($_POST) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script>
-        $("form").submit(function(e){
-            var error = "";
-            
-            if($("#name").val() == "") {
-                error+= "<p> Please enter your name. </p>";
-            }
-            
-             if($("#email").val() == "") {
-                error+= "<p> Please enter your email address so I can get back to you. </p>";
-            }
-             
-            if($("#emailContent").val() == "") {
-                error+= "<p> Please let me know what you need. The content field is required. </p>";
-            }
-            
-            if(error != "") {
-            $('#error').html(error);
-            
-            return false;
-            } else {
-              return true;
-            }
-        });
-    </script>
+      $("form").submit(function(e){
+          var error = "";
+          
+          if($("#name").val() == "") {
+              error+= "<p> Please enter your name. </p>";
+          }
+          
+           if($("#email").val() == "") {
+              error+= "<p> Please enter your email address so I can get back to you. </p>";
+          }
+           
+          if($("#emailContent").val() == "") {
+              error+= "<p> Please let me know what you need. The content field is required. </p>";
+          }
+          
+          if(error != "") {
+          $('#error').html(error);
+          
+          return false;
+          } else {
+            return true;
+          }
+      });
+  </script>
   </body>
 </html>
