@@ -179,29 +179,33 @@ if($_POST) {
                 <div class="article-content">
                   <p class="card-category">LEGO</p>
                   <h3 class="card-title">LEGO Website for the client</h3>
-                  <p class="card-excerpt">Our client is a LEGO lover and this is his very first website and it is also our first real life client project that we did as a team through out the year.</p>
+                  <p class="card-excerpt">Our client is a LEGO lover and this is his very first website and it is also our first "real life" client project that we did as a team through out the year.</p>
                 </div>
               </a>
               </article>
               <article class="article-card">
+                <a href="https://dylanwei.com/wordpress/" class="card-category">
                 <figure class="article-image">
                   <img src="img/wordpress.png" alt="Wordpress website"/>
                 </figure>
                 <div class="article-content">
-                  <a href="#" class="card-category">Wordpress</a>
+                  <p class="card-category">Wordpress</p>
                   <h3 class="card-title">Replicated from official website</h3>
                   <p class="card-excerpt">This is a project that I did last semester as a replicate website by using my own codes to style it to make it looks similar to the official website.</p>
                 </div>
+              </a>
               </article>
               <article class="article-card">
+                <a href="https://www.dylanwei.com/garden-project/index.html" class="card-category">
                 <figure class="article-image">
-                  <img src="img/silverstripe.png" alt="SilverStripe"/>
+                  <img src="img/garden.jpg" alt="Garden"/>
                 </figure>
                 <div class="article-content">
-                  <a href="my-project/public/index.php" class="card-category">SilverStripe</a>
+                  <p class="card-category">George's Garden Center</p>
                   <h3 class="card-title">In class project from semester 1</h3>
-                  <p class="card-excerpt">This project was very challenging at the beginning as it was new project with PHP and CMS, but with some help I eventually overcome the problems.</p>
+                  <p class="card-excerpt">This project was very challenging at the beginning as it was a new wesbite using Foundation, but with some help I eventually overcame the problems.</p>
                 </div>
+              </a>
               </article>
               </div>
             </div>
@@ -253,7 +257,7 @@ if($_POST) {
         </footer>
         </div>
     </main>
-    <script src="src/js/nav.js"></script>
+    <script src="nav.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
       var typed = new Typed(".auto-input", {

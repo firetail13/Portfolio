@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Dylan's Portfolio</title>
     <link href="tailwind.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +39,7 @@
               <h1 class="text-white text-4xl mb-8 leading-tight-none auto-type-name">I'm <span class="auto-input"></span></h1>
               <p class="text-gray-400 mb-8">Click below to download my resume and if you want to learn more about me feel free to contact me!</p>
               <div>
-              <a class="font-lato resume-download-button" href="#">Download Resume</a>
+              <a class="font-lato resume-download-button" href="pdf/resume.pdf">Download Resume</a>
               <a class="font-lato contact-button" href="#contact">Contact Me</a>
             </div>
             </div>
@@ -140,29 +140,33 @@
                 <div class="article-content">
                   <p class="card-category">LEGO</p>
                   <h3 class="card-title">LEGO Website for the client</h3>
-                  <p class="card-excerpt">Our client is a LEGO lover and this is his very first website and it is also our first real life client project that we did as a team through out the year.</p>
+                  <p class="card-excerpt">My teammates and I's client is a LEGO lover and this is his very first website and it is also our first "real life" client project that we did as a team through out the year.</p>
                 </div>
               </a>
               </article>
               <article class="article-card">
+                <a href="https://dylanwei.com/wordpress/" class="card-category">
                 <figure class="article-image">
                   <img src="img/wordpress.png" alt="Wordpress website"/>
                 </figure>
                 <div class="article-content">
-                  <a href="#" class="card-category">Wordpress</a>
+                  <p class="card-category">Wordpress</p>
                   <h3 class="card-title">Replicated from official website</h3>
                   <p class="card-excerpt">This is a project that I did last semester as a replicate website by using my own codes to style it to make it looks similar to the official website.</p>
                 </div>
+              </a>
               </article>
               <article class="article-card">
+                <a href="https://www.dylanwei.com/garden-project/index.html" class="card-category">
                 <figure class="article-image">
-                  <img src="img/silverstripe.png" alt="SilverStripe"/>
+                  <img src="img/garden.jpg" alt="Garden"/>
                 </figure>
                 <div class="article-content">
-                  <a href="my-project/public/index.php" class="card-category">SilverStripe</a>
+                  <p class="card-category">George's Garden Center</p>
                   <h3 class="card-title">In class project from semester 1</h3>
-                  <p class="card-excerpt">This project was very challenging at the beginning as it was new project with PHP and CMS, but with some help I eventually overcome the problems.</p>
+                  <p class="card-excerpt">This project was very challenging at the beginning as it was a new wesbite using Foundation, but with some help I eventually overcame the problems.</p>
                 </div>
+              </a>
               </article>
               </div>
             </div>
@@ -214,6 +218,7 @@
         </footer>
         </div>
     </main>
+    <script src="nav.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
       var typed = new Typed(".auto-input", {

@@ -1,0 +1,52 @@
+@font-face {
+	font-family: Cavior Dreams;
+	src: url(../font/CaviarDreams.ttf);
+}
+
+body {
+	color: #2e3438;
+	font-family: Cavior Dreams;
+}
+
+.top-bar, .top-bar ul {
+    background-color: #f3f3f3;
+    font-family: Cavior Dreams;
+}
+
+.top-bar a {
+	color: #2e3438;
+}
+
+.top-bar a:hover {
+	opacity: 0.5;
+}
+
+.orbit img {
+	width: 100%;
+	height: 550px;
+}
+
+.callout.secondary {
+	background-color: #f3f3f3;
+}
+
+.callout.secondary a {
+	color: #2e3438;
+}
+
+.button {
+	background: green;
+}
+
+.button:hover {
+	background: darkgreen;
+}
+
+footer .menu a {
+	font-size: 1.5em;
+	padding-left: 0.5px;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: Cavior Dreams;
+}
